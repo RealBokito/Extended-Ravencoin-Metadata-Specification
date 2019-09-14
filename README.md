@@ -167,7 +167,7 @@ The extended Ravencoin Metadata Specification also allows for the support of ext
 An issuer has access to the following fields to describe an external resource:
 *	external_resource (required): an URI to a structured extended Ravencoin  Metadata resource in JSON or a different resource. When referencing a different resource such as a PDF file or HTML webpage the use of the external_mime field is advised. 
 *	external_mime (optional): the mimetype of the resource.
-*	external_size (optional): the size of the external resource. 
+*	external_size (optional): the size of the external resource in Kilobytes. Never required for redirecting links. 
 *	external_schema (optional): an alternative JSON formatted schema being used by the external resource. In order to allow asset viewers or explorers, as well as other software systems to understand the structure of the metadata, issuers can include an URI to a JSON formatted resources describing the metadata which is being presented.
 ```
 {
@@ -191,7 +191,7 @@ An issuer has access to the following fields to describe an external resource:
    "external_resource": "https://www.tzero.com/exchange-metadata.json",
    "external_mime": "text/json",
    "external_size": 4, 
-   " external_schema ": "https://www.tzero.com/exchange-metadata-schema.json",,
+   "external_schema": "https://www.tzero.com/exchange-metadata-schema.json",,
 
 },
 ………
