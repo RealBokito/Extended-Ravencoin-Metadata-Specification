@@ -75,13 +75,13 @@ The inclusion of the Schema and Version tags will allow the use of structured Ra
 }
 ```
 Based on the above structure the following schema is valid:
-(required fields in bold)
+(* = required fields)
 ```
 {
-   **"model": "Yaris",**
-   **"manufacturer": "Toyota",**
-   **"buildyear": "2019",**
-   **"licenseplase": “RU-092-Y”,**
+   "model": "Yaris",*
+   "manufacturer": "Toyota",*
+   "buildyear": "2019",*
+   "licenseplase": “RU-092-Y”,*
    "bodytype": "hatchback",
    "co2emissions": 0.2, 
    "fuelcapacity": 75
@@ -90,17 +90,17 @@ Based on the above structure the following schema is valid:
 The combined metadata description in this example will result in the following JSON output:
 ```
 {
-   **“schema”:”CAR”,**
-   **“version”: “0.1”,**
+   “schema”:”CAR”,*
+   “version”: “0.1”,*
    "name": "Yaris",
    "issuer": "Toyota",
    "description": "Toyota Yaris",
    "forsale": true,
    "forsale_price": "5000 RVN",
-   **"model": "Yaris",**
-   **"manufacturer": "Toyota",**
-   **"buildyear": "2019",**
-   **"licenseplate": “RU-092-Y”,**
+   "model": "Yaris",*
+   "manufacturer": "Toyota",*
+   "buildyear": "2019",*
+   "licenseplate": “RU-092-Y”,*
    "bodytype": "hatchback",
    "co2emissions": 0.2, 
    "fuelcapacity": 75
