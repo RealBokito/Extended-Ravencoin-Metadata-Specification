@@ -1,4 +1,4 @@
-# extended Ravencoin Metadata Specification
+# Extended Ravencoin Metadata Specification
 Please note:
 The following is work in progress……
 ## Abstract
@@ -76,10 +76,10 @@ Based on the above structure the following schema is valid:
 (required fields in bold)
 ```
 {
-   "model": "Yaris",
-   "manufacturer": "Toyota",
-   "buildyear": "2019",
-   "licenseplase": “RU-092-Y”,
+   **"model": "Yaris",**
+   **"manufacturer": "Toyota",**
+   **"buildyear": "2019",**
+   **"licenseplase": “RU-092-Y”,**
    "bodytype": "hatchback",
    "co2emissions": 0.2, 
    "fuelcapacity": 75
@@ -88,17 +88,17 @@ Based on the above structure the following schema is valid:
 The combined metadata description in this example will result in the following JSON output:
 ```
 {
-   “schema”:”CAR”,
-   “version”: “0.1”,
+   **“schema”:”CAR”,**
+   **“version”: “0.1”,**
    "name": "Yaris",
    "issuer": "Toyota",
    "description": "Toyota Yaris",
    "forsale": true,
    "forsale_price": "5000 RVN",
-  "model": "Yaris",
-   "manufacturer": "Toyota",
-   "buildyear": "2019",
-   "licenseplate": “RU-092-Y”,
+   **"model": "Yaris",**
+   **"manufacturer": "Toyota",**
+   **"buildyear": "2019",**
+   **"licenseplate": “RU-092-Y”,**
    "bodytype": "hatchback",
    "co2emissions": 0.2, 
    "fuelcapacity": 75
@@ -106,3 +106,94 @@ The combined metadata description in this example will result in the following J
 ```
 Please Note:
 When using a single schema to describe an asset it is advised to maintain the older Ravencoin Metadata fieldnames for backwards compatibility reasons. Existing assts as well as older asset viewers and explorers can therefore coexist with those who do support extended Metadata descriptions. However, for issuers who plan to exchange the asset on a certain platform which supports the extended metadata specification, the original fields may be removed if backwards compatibility is not a requirement.
+
+## Multiple Asset Schema’s
+An Asset registered on the Ravencoin blockchain can only include one IPFS resource (hash). In order to support multiple schemas with metadata to describe your Asset two or more schemas can be combined into a single array.
+```
+{
+   "name": "Yaris",
+…………
+   "extended": [{
+   “schema”:”Schema name 1”,
+   “version”: “0.1”,
+  “fieldname1”:………., 
+  “fieldname2”:……….,
+  “fieldname3”:……….,
+}, 
+{
+   “schema”:”Schema name 2”,
+   “version”: “0.1”, 
+  “fieldname1”:………., 
+  “fieldname2”:……….,
+  “fieldname3”:……….,
+
+},
+………
+]
+}
+```
+One should implement this structure in cases where multiple schema specifications are used. As such, a cryptocurrency could use the schemas COIN, ICO and EXCHANGE to include a structured set of information which can be parsed by viewers and explorers.
+```
+{
+   "name": "Ravencoin",
+   "issuer": "Community",
+   "description": "In a land……..",
+   "extended": {
+   “schema”:”COIN”,
+   “version”: “0.1”,
+  “Symbol”: “RVN”,
+  “www”:”https://www.ravencoin.org/”
+}, 
+{
+   “schema”:”EXCHANGE”,
+   “version”: “0.1”, 
+   “name”: “Binance”, 
+   “url”: “www.binance.com”, 
+   “tickers”: {
+“RVNBTC”, 
+“RVNLTC”, 
+},
+   “tickers”: {
+“RVNBTC”, 
+“RVNLTC”, 
+},
+},
+}
+```
+## Resource
+The extended Ravencoin Metadata Specification also allows for the support of external resources. External resources provides for more flexibilities. 
+An issuer has access to the following fields to describe an external resource:
+*	external_resource (required): an URI to a structured extended Ravencoin  Metadata resource in JSON or a different resource. When referencing a different resource such as a PDF file or HTML webpage the use of the external_mime field is advised. 
+*	external_mime (optional): the mimetype of the resource.
+*	external_size (optional): the size of the external resource. 
+*	external_schema (optional): an alternative JSON formatted schema being used by the external resource. In order to allow asset viewers or explorers, as well as other software systems to understand the structure of the metadata, issuers can include an URI to a JSON formatted resources describing the metadata which is being presented.
+```
+{
+   "name": "tZero",
+…………
+   "extended": [{
+   “schema”:”Schema name 1”,
+   “version”: “0.1”,
+  “fieldname1”:………., 
+  “fieldname2”:……….,
+  “fieldname3”:……….,
+}, 
+{
+   “schema”:”STO”,
+   “version”: “0.1”, 
+   "external_resource": "https://www.tzero.com/sto-metadata.json",
+},
+{
+   “schema”:”tZero_exchange”,
+   “version”: “0.1”, 
+   "external_resource": "https://www.tzero.com/exchange-metadata.json",
+   "external_mime": "text/json",
+   "external_size": 4, 
+   " external_schema ": "https://www.tzero.com/exchange-metadata-schema.json",,
+
+},
+………
+]
+}
+```
+The support of external resources is advised  when an issuer wants to use a different system or systems to store metadata instead of the currently support IPFS network. It can also be used to redirect users to a website or file.
