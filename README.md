@@ -10,7 +10,7 @@ The metadata stored on IPFS currently consist of multiple non-required fields. T
 * There is no requirement to use any of the specified fields, and asset issuers can decide to either implement some of the fields above, choose different names or own, unknown fields. This unstructured way of providing metadata makes it difficult for asset viewers and explorers to display data when the input is filtered on specific field names.
 * For some, there may be fields missing which would better describe their asset on the blockchain. The lack of additional fields and a more structure way of describing an asset could introduce low quality descriptions of the assets in the blockchain.
 The proposal includes two ways to implement one or multiple schemas into the Ravencoin Metadata specification. This proposal also consist of developing multiple classes for various types of assets, such as books, toys, paintings, invoices and warranty documents and registrations. This proposal, inspired by schema.org, proposes to develop a more structured data approach in describing these assets. To goal is to setup a collaborative, community supported development with a mission to create, maintain, and promote schemas for structured data on blockchains, i.e. Ravencoin.
-## Sturcture
+## Structure
 The extended Ravencoin Metadata Specification consists of two types of JSON structured resource:
 *	A JSON structured Ravencoin Metadata resource which describes the details of an asset,
 *	A JSON structured Ravencoin Metadata Schema resource which describes the structure of the Metadata.
