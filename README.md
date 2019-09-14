@@ -37,8 +37,10 @@ In this new specification the issuer is able to include the schema and schema ve
    "forsale_price": "5000 RVN"
 }
 ```
-Schema indicates which schema has been used to describe the asset in more detail. Similar fields, as opposed to the original metadata specification, can be merged together. 
-Version indicates which version of the schema model has been used. Different version number will allow for future updates of schemas while providing backward compatibilities options for those who like to support it.
+**Schema** indicates which schema has been used to describe the asset in more detail. Similar fields, as opposed to the original metadata specification, can be merged together. 
+
+**Version** indicates which version of the schema model has been used. Different version number will allow for future updates of schemas while providing backward compatibilities options for those who like to support it.
+
 The inclusion of the Schema and Version tags will allow the use of structured Ravencoin Metadata Schemas. This will provide software engineers with a JSON structured set of field names, data types and whether or not a fields is mandatory. Below is an example of the CAR Metadata Schema.
 ```
 {
