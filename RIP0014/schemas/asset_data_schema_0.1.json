@@ -1,0 +1,32 @@
+{
+	"schema":"asset_data",
+	"version": 0.1,
+	"asset_name": {
+		"required":1,
+		"type": "string"
+	},
+	"description":  {
+		"required":1,
+		"type": "string"
+	},
+	"description_mime":  {
+		"required":0,
+		"type": "string"
+	},
+	"icon": {
+		"required":0,
+		"type": "string"
+	},
+	"type": {
+		"required":0,
+		"type": "string"
+	},
+	"restrictions": {
+		"required":0,
+		"type": "string"
+	},
+	"keywords": {
+		"required":0,
+		"type": "string"
+	}
+}
