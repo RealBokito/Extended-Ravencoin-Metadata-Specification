@@ -42,14 +42,8 @@
 				"type": "string"
 			},
 			"country": {
-				"ctry1": {
-					"required":1,
-					"type": "string"
-				},
-				"ctry2": {
-					"required":1,
-					"type": "string"
-				}
+				"required":1,
+				"type": "string"
 			}
 		}
 	}
