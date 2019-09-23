@@ -21,9 +21,11 @@
 			"physical_address": {
 				"street_address1": "first address line",
 				"street_address2": "second address line",
+				"street_address3": "second address line",
 				"city": "city, town or province",
 				"state": "state or country",
-				"postal_code": "zip or postal code"
+				"postal_code": "zip or postal code",
+				"country": "zip or postal code"
 			}
 		},
 		{
