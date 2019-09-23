@@ -6,7 +6,7 @@ Scenarios
 
 Normal operation:
 This test will validate all fields in metadata.json, without 
-any errors
+any errors, or indicate that some unknown fields were detected.
 
 Invalid Meta Data:
 When metadata.json is edited to utilze v0.2 of the 
@@ -66,14 +66,10 @@ function validateMetaData($data){
 	//  It's up to the software engineer to decide if the non existence of a Meta Data Schema file results into a true or false validation
 	if(file_exists('schemas/'.$schema)){
 		//  Read the Schema file and decode into associative arrays
-		//  NOTE: this part does not yet support nested arrays or objects!!!
 		$schema = file_get_contents('schemas/'.$schema);
 		$schema = json_decode($schema,true);
 		
 		//  Get the fieldnames from the Schema by abstracting the array keys
-		//$schemaFields = array_keys($schema);
-		//var_dump($data);
-		//var_dump($schema);
 		$ret = validate($data,$schema);
 		if(!$ret)
 			return false;
@@ -89,8 +85,6 @@ function validateMetaData($data){
 
 function validate($data,$schema,$level=1){
 	echo "Level: ".$level."...\r\n";
-	//var_dump($data);
-	//var_dump($schema);
 	//  Get the fieldnames from the Schema by abstracting the array keys
 	$schemaFields = array_keys($schema);
 	
