@@ -60,7 +60,7 @@ foreach($data['metadata'] as $obj){
 
 function validateMetaData($data){
 	//  Put together the link the to schema file used for the Meta Data
-	$schema = $data['schema'].'_schema_'.$data['version'].'.json';
+	$schema = $data['schema'].'_'.$data['version'].'.json';
 	
 	//  Validate if the Meta Data exists.
 	//  It's up to the software engineer to decide if the non existence of a Meta Data Schema file results into a true or false validation
