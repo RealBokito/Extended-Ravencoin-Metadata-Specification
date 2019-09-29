@@ -1,4 +1,4 @@
-# Extended Ravencoin Metadata Specification
+<b>Extended Ravencoin Metadata Specification</b>
 <pre>
 RIP: 15
 Title: RIP 15 Extended Ravencoin Metadata Specification
