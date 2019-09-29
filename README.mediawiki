@@ -157,10 +157,10 @@ When using multiple schemas to describe an asset there is no reason to maintain 
 
 ==External Resources==
 Although primarily used by the Ravencoin blockchain, the Extended Ravencoin Metadata Specification does not require IPFS as the main storage supplier. External resources provides for more flexibilities and gives the issuer access to the following fields to describe an external resource:
-*	**external_resource** (required): an URI to a structured Extended Ravencoin Metadata resource in JSON or a different type of resource. When referencing a different type resource such as a PDF file or HTML webpage the use of the external_mime and external_size field is advised and increases the chances of wallets or explorers to display the external resource. 
-*	**external_mime** (optional): the mimetype of the resource.
-*	**external_size** (optional): the size of the external resource. 
-*	**external_schema** (optional): an alternative JSON formatted schema being used by the external resource. In order to allow wallets and asset explorers to understand the structure of the metadata, issuers can include an URI to a JSON formatted resources describing the metadata which is being presented. The schema needs to be structured according to the Ravencoin Metadata Schema guidelines above. 
+*	'''external_resource''' (required): an URI to a structured Extended Ravencoin Metadata resource in JSON or a different type of resource. When referencing a different type resource such as a PDF file or HTML webpage the use of the external_mime and external_size field is advised and increases the chances of wallets or explorers to display the external resource. 
+*	'''external_mime''' (optional): the mimetype of the resource.
+*	'''external_size''' (optional): the size of the external resource. 
+*	'''external_schema''' (optional): an alternative JSON formatted schema being used by the external resource. In order to allow wallets and asset explorers to understand the structure of the metadata, issuers can include an URI to a JSON formatted resources describing the metadata which is being presented. The schema needs to be structured according to the Ravencoin Metadata Schema guidelines above. 
 The support of external resources is advised when an issuer wants to use a different system or systems to store metadata instead of the currently supported IPFS network. It can also be used to redirect users to a website or file.
 The above keys will help developers with the detection of an external resource. Any valid combination of the above keys can be used and found in 1 or mutliple JSON schema object(s) and is an indication of an external reference. However, whether or not you, the developer, decides to support External Resources is at your own discretion.
 The following example show three JSON Metadata Objects:
