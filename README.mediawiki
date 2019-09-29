@@ -34,7 +34,7 @@ RIP15 (Extended Ravencoin Metadata Specification) consists of two types of JSON 
 ==Ravencoin Metadata Schemas==
 The Extended Ravencoin Metadata Specification utilizes a schema system in order to describe the set of (required) fields and data types used in describing the asset. Ravencoin Metadata Schema files have the following naming convention using lower cases only: Schema-name_Schema-Version.json, e.g. asset_data_0.1.json, ipfs_attachments_1.1.json.
 As example, the following describes the metadata fields of the schema CAR.
-```
+<pre>
 {
    "schema": “CAR”,
    "version": 0.1,
@@ -67,9 +67,9 @@ As example, the following describes the metadata fields of the schema CAR.
       “required”: 0
    }
 }
-```
+</pre>
 In some situations there might be a need for nested fields such as a physical addresses. Schema files can indicate nested fields and their data types using the key fields. In the example below the admin_data schema has a Physical_address-field which holds a JSON object of nested fields. The nested fields are directly accessible through the fields-key:
-```
+<pre>
 {
 	"schema":"admin_data",
 	"version": 0.1,
@@ -92,24 +92,24 @@ In some situations there might be a need for nested fields such as a physical ad
 		}
 	}
 }
-```
+</pre>
 The fields-key is expected to be a JSON object. If a fields-key is found, but not of the data type Object and/or not a valid JSON structure, it can and should be treated as a normal field holding some kind of value.
 The support of nested fields is provided in order to be as flexible as possible and nested fields can be unlimited. While implementing support for RIP15 developers are advised to take into account the number of levels for nested fields. While 2 to 5 levels seems reasonable, 10 or more levels might indicate misusage of the system. However, it might also be an indicator of a possible use case scenario for which a new schema is required but yet to be developed.
 
 ==Single Schema Usage==
 In RIP15 the issuer is able to include the schema and schema version used in describing an asset: 
-```
+<pre>
 {
    “schema”:”CAR”,
    “version”: “0.1”,
     …….
 }
-```
+</pre>
 Schema indicates which schema has been used to describe the asset in more detail. When using a single schema to describe an asset it is advised to maintain the older Ravencoin Metadata fieldnames for backwards compatibility for existing and/or older assts explorers. For issuers who plan to exchange the asset on a certain platform which supports the extended metadata specification, the original fields may be removed if backwards compatibility is not a requirement.
 Version indicates which version of the schema model has been used. Different version numbers will allow for future updates of schemas while providing backward compatibilities for those who like to support it. The version numbering follows the major and minor versioning of schema files, e.g. 0.1, 1.5 and 2.0.
 Combined, the schema and version number indicates which set of (required) fields and data types has been used. This will provide developers with dynamically loading the appropriate Ravencoin Metadata Schema to validate and display the metadata in a wallet, explorer or platform.
 The combined CAR metadata description in this example will result in the following valid JSON output:
-```
+<pre>
 {
    “schema”:”CAR”,
    “version”: “0.1”,
@@ -126,11 +126,11 @@ The combined CAR metadata description in this example will result in the followi
    "co2emissions": 0.2, 
    "fuelcapacity": 75
 }
-```
+</pre>
 
 ==Multiple Schema’s==
 An Asset registered on the Ravencoin blockchain can only include one IPFS resource (hash) and depending on the type and use of an asset the issuer may have the need to provide for high quality metadata for legal or other reasons. In order to support multiple schemas with metadata to describe an asset RIP 15 proposes the following mechanism to utilize and combine two or more schemas and introduces the usage of the metadata field. The metadata field will hold an array of JSON objects. Each JSON object is a single Ravencoin Metadata Schema object on its own, and describes a set of predefined (required) fields and data types, as specified in the Schema file.
-```
+<pre>
 {
    "metadata": [{
       “schema”:”Schema name 1”,
@@ -150,7 +150,7 @@ An Asset registered on the Ravencoin blockchain can only include one IPFS resour
    ………
    ]
 }
-```
+</pre>
 This structure should be followed in cases where multiple schema specifications are used. As such, an asset can include a structured set of information which can be parsed and displayed by wallets and explorers. See the file Proof of Concept/metadata.json for an example.
 
 When using multiple schemas to describe an asset there is no reason to maintain the older Ravencoin Metadata fieldnames for backwards compatibility, but issuer who prefer to do so can still add and use these fields.
@@ -167,7 +167,7 @@ The following example show three JSON Metadata Objects:
 *	Object 1. A normal JSON Metadata object
 *	Object 2. An external JSON Metadata object supporting an community supported Schema
 *	Object 3. An custom external JSON Metadata object with a reference to an external Schema
-```
+<pre>
 {
    "name": "tZero",
 …………
@@ -194,7 +194,7 @@ The following example show three JSON Metadata Objects:
    ………
    ]
 }
-```
+</pre>
 
 ==Implementation==
 Some of the reasons to implement and support for RIP15 are:
