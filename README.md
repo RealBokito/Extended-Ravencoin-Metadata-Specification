@@ -7,7 +7,7 @@ Status: Draft
 Type: Process
 Reference Implementation: https://github.com/RealBokito/Extended-Ravencoin-Metadata-Specification
 Created: 2019-09-14
-</pre
+</pre>
 
 ==Abstract==
 The following is a proposal for a new, more advanced metadata specification in order to describe assets on the Ravencoin blockchain. This specification provides for a common extensible system for metadata to be stored in a structured JSON format as well as help with generating valid JSON formatted metadata for new or reissued assets.
