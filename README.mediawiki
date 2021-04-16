@@ -11,6 +11,7 @@ Last Update: 2021-04-16
 </pre>
 
 ==Abstract==
+RIP 15 Extended Ravencoin Metadata Specification’s objective is to increase the value and quality of metadata related to assets issued on the Ravencoin blockchain. It proposes a more structured way of describing assets by utilizing pre-defined schemas developed by the community and the users of the blockchain.
 
 ==Motivation==
 RIP 15 Extended Ravencoin Metadata Specification is a proposal to extend the current Ravencoin Metadata Specification by Tron Black July 24, 2018.
