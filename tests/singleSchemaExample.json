@@ -1,0 +1,17 @@
+{
+	"schema":"admin_data",
+	"version": 0.1,
+	"issuer": "issuer",
+	"contact_name": "contact name",
+	"website_url": "website",
+	"email": "contact email",
+	"physical_address": {
+		"street_address1": "first address line",
+		"street_address2": "second address line",
+		"street_address3": "testing unknown fields",
+		"city": "city, town or province",
+		"state": "state or country",
+		"postal_code": "zip or postal code",
+		"country": "zip or postal code"
+	}
+}

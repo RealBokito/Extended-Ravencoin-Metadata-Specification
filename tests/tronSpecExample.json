@@ -1,0 +1,10 @@
+{
+	"asset_name": "full asset name",
+	"description": "asset description",
+	"description_mime": "mime type of the description, e.g., text/x-markdown; charset=UTF-8",
+	"icon": "base 64 encoded png (64x64 is recommended)",
+	"type": "e.g., Title, Points, Shares, Tickets",
+	"restrictions": "e.g., Rule 144, Members Only",
+	"restrictions2": "e.g., Rule 144, Members Only",
+	"keywords": "Baseball Cards, Coins, Book Of The Month Club"
+}

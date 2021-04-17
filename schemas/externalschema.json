@@ -1,0 +1,12 @@
+{
+	"schema":"ticker",
+	"version": 0.1,
+	"symbol": {
+		"required":1,
+		"type": "string"
+	},
+	"price":  {
+		"required":1,
+		"type": "float"
+	}
+}

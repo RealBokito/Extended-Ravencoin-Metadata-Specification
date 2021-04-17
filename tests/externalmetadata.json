@@ -1,0 +1,6 @@
+{
+	"schema":"ticker",
+	"version": 0.1,
+	"symbol": "RVN/BTC",
+	"price":  0.50
+}

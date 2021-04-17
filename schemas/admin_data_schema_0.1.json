@@ -1,0 +1,46 @@
+{
+	"schema":"admin_data",
+	"version": 0.1,
+	"issuer": {
+		"required":1,
+		"type": "string"
+	},
+	"contact_name":  {
+		"required":1,
+		"type": "string"
+	},
+	"website_url":  {
+		"required":0,
+		"type": "string"
+	},
+	"email": {
+		"required":1,
+		"type": "string"
+	},
+	"physical_address": {
+		"street_address1": {
+			"required":1,
+			"type": "string"
+		},
+		"street_address2": {
+			"required":0,
+			"type": "string"
+		},
+		"city": {
+			"required":1,
+			"type": "string"
+		},
+		"state": {
+			"required":0,
+			"type": "string"
+		},
+		"postal_code": {
+			"required":1,
+			"type": "string"
+		},
+		"country": {
+			"required":1,
+			"type": "string"
+		}		
+	}
+}
