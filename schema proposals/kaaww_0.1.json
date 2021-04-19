@@ -1,0 +1,134 @@
+{
+    "schema":"kaaww",
+    "version": 0.1,
+    "icon":{
+		"required":1,
+		"type": "string"
+	},
+    "response":{
+		"required":1,
+		"type": "boolean"
+	},
+    "publisher_handel":{
+		"required":1,
+		"type": "string"
+	},
+    "publishes_address":{
+		"required":1,
+		"type": "string"
+	},
+    "repost":{
+		"required":1,
+		"type": "boolean"
+	},
+    "reposted_author":{
+		"required":1,
+		"type": "string"
+	},
+    "quote":{
+		"required":1,
+		"type": "boolean"
+	},
+    "quote_hash":{
+		"required":1,
+		"type": "string"
+	},
+    "message_text":{
+		"required":1,
+		"type": "string"
+	},
+    "warnings":{
+		"required":1,
+		"type": "string"
+	},
+    "tags":{
+		"required":1,
+		"type": "string"
+	},
+    "KAAWWW_outs":{
+		"required":1,
+		"type": "string"
+	},
+    "admin_data":{
+        "author_asset":{
+            "required":1,
+            "type": "string"
+        },
+        "author_address":{
+            "required":1,
+            "type": "string"
+        },
+        "author_icon":{
+            "required":1,
+            "type": "string"
+        },
+        "author_picture":{
+            "required":1,
+            "type": "string"
+        },
+        "author_handle":{
+            "required":1,
+            "type": "string"
+        },
+        "author_tagline":{
+            "required":0,
+            "type": "string"
+        },
+        "description":{
+            "required":0,
+            "type": "string"
+        },
+        "channel":{
+            "required":1,
+            "type": "string"
+        },
+        "verified":{
+            "required":1,
+            "type": "boolean"
+        },
+        "verifying_entity":{
+            "required":1,
+            "type": "string"
+        },
+        "verifying_entity_url":{
+            "required":1,
+            "type": "string"
+        },
+        "verification_crendentials":{
+            "required":1,
+            "type": "string"
+        },
+        "website":{
+            "required":1,
+            "type": "string"
+        },
+        "contact_name":{
+            "required":1,
+            "type": "string"
+        },
+        "website_url":{
+            "required":1,
+            "type": "string"
+        },
+        "contact_email":{
+            "required":1,
+            "type": "string"
+        },
+        "brave_verified":{
+            "required":1,
+            "type": "boolean"
+        },
+        "BAT_address":{
+            "required":1,
+            "type": "string"
+        }
+    },
+    "other_data":{
+        "required":0,
+        "type": "array"
+    },
+    "url_links":{
+        "required":0,
+        "type": "array"
+    }
+}

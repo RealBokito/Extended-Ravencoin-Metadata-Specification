@@ -1,0 +1,20 @@
+{
+    "schema":"virustotal",
+    "version": 0.1,
+    "filename":{
+        "required":1,
+        "type": "string"
+    },
+    "hash":{
+        "required":1,
+        "type": "string"
+    },
+    "URL":{
+        "required":0,
+        "type": "string"
+    },
+    "date":{
+        "required":0,
+        "type": "string"
+    }
+}

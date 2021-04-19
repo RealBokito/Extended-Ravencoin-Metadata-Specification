@@ -1,0 +1,92 @@
+ {
+    "schema":"ravencoin_metadata_spec",
+    "version": 0.1,
+    "contract_url": {
+        "required":0,
+        "type": "string"
+    },
+    "contract_hash": {
+        "required":0,
+        "type": "string"
+    },
+    "contract_signature": {
+        "required":0,
+        "type": "string"
+    },
+    "contract_address": {
+        "required":0,
+        "type": "string"
+    },
+    "symbol": {
+        "required":0,
+        "type": "string"
+    },
+    "name": {
+        "required":0,
+        "type": "string"
+    },
+    "issuer": {
+        "required":0,
+        "type": "string"
+    },
+    "description": {
+        "required":0,
+        "type": "string"
+    },
+    "description_mime": {
+        "required":0,
+        "type": "string"
+    },
+    "keywords": {
+        "required":0,
+        "type": "string"
+    },
+    "type": {
+        "required":0,
+        "type": "string"
+    },
+    "website_url": {
+        "required":0,
+        "type": "string"
+    },
+    "icon": {
+        "required":0,
+        "type": "string"
+    },
+    "image_url": {
+        "required":0,
+        "type": "string"
+    },
+    "contact_name": {
+        "required":0,
+        "type": "string"
+    },
+    "contact_email": {
+        "required":0,
+        "type": "string"
+    },
+    "contact_address": {
+        "required":0,
+        "type": "string"
+    },
+    "contact_phone": {
+        "required":0,
+        "type": "string"
+    },
+    "forsale": {
+        "required":0,
+        "type": "boolean"
+    },
+    "forsale_price": {
+        "required":0,
+        "type": "string"
+    },
+    "domain": {
+        "required":0,
+        "type": "string"
+    },
+    "restricted": {
+        "required":0,
+        "type": "string"
+    }
+ }
