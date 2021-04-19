@@ -27,7 +27,7 @@ SOFTWARE.
 */
 
 //  Load all schemas from a folder
-$files = scandir('schemas/');
+$files = scandir('testschemas/');
 
 //  Cycle through all files and create an line the the form for selection
 echo "<table><form method='post' id='schemaForm'> ";
@@ -60,9 +60,9 @@ function loadForm($schemas){
 
 	//  Cycle through every selected schema and compile the appropriated forms
 	foreach($schemas as $schema){
-		if(file_exists('schemas/'.$schema)){
+		if(file_exists('testschemas/'.$schema)){
 			//  Load the schema as an associative array
-			$schema = file_get_contents('schemas/'.$schema);
+			$schema = file_get_contents('testschemas/'.$schema);
 			$schema = json_decode($schema,true);
 			//  Take the keys as schema fields
 			$schemaFields = array_keys($schema);
