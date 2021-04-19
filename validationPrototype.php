@@ -38,7 +38,7 @@ SOFTWARE.
 */
 
 //  Read the Metadata
-$json_data = file_get_contents('tests/tronSpecExample.json');
+$json_data = file_get_contents('tests/multiSchemaExample.json');
 
 //  Decode the Metadata to associative arrays
 $data = json_decode($json_data,true);
