@@ -76,10 +76,10 @@ function validateMetaData($data){
 	
 	//  Validate if the MetaData exists.
 	//  It's up to the software engineer to decide if the non existence of a Metadata Schema file results into a true or false validation
-	if(file_exists('schemas/'.$schema)){
+	if(file_exists('testschemas/'.$schema)){
 		//  Read the Schema file and decode into an associative array
 		//  NOTE: this part does not yet support nested arrays or objects!!!
-		$schema = file_get_contents('schemas/'.$schema);
+		$schema = file_get_contents('testschemas/'.$schema);
 		$schema = json_decode($schema,true); // Instructing PHP to turn the JSON Object into a associative array!
 		
 		//  Start the validation process
