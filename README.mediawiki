@@ -68,7 +68,7 @@ Metadata Schemas describe the set of (required) fields and data types used. Each
    "licenseplate":  {
                      “type”: “regex”,
                      “required”: 1,
-                     “expr”:” [a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}-[a-zA-Z0-9]”
+                     “expr”:”UNDER DEVELOPMENT!”
                     },
    "bodytype":  {
                      “type”: “string”,
