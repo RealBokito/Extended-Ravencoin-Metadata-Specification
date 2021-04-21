@@ -220,6 +220,18 @@ The following example show three JSON Metadata Objects:
 </pre>
 Note: The available prototype does not fully support external resources other than external metadata schemas and metadata files and is only supported within the extended section of a metadata file.
 
+==Supported Data Types==
+The prototype of the RIP15 Extended Ravencoin Metadata Specification currently supports the following data types:
+*	String
+*	Integer
+*	Float
+*	Boolean
+
+Support is expected for:
+*	Array
+*	JSON
+*	fields with an expression (not really a data type)
+
 ==Implementation==
 Reasons to implement and support RIP15 are:
 *	It lowers the bar for issuers by supplying predefined and validated schemas to chose from,
