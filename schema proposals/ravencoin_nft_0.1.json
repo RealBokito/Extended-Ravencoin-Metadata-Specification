@@ -30,5 +30,47 @@
         "required": 0,
         "type": "json",
         "description": "Optional JSON object that defines a set of attributes which classifies and defines the NFT."
-    }
+    },
+    "contact_name": {
+        "required":1,
+        "type": "string"
+    },    
+    "contact_company_name": {
+        "required":0,
+        "type": "string"
+    },
+    "contact_email": {
+        "required":1,
+        "type": "string"
+    },
+    "contact_address": {
+		"street_address1": {
+			"required":1,
+			"type": "string"
+		},
+		"street_address2": {
+			"required":0,
+			"type": "string"
+		},
+		"city": {
+			"required":1,
+			"type": "string"
+		},
+		"state": {
+			"required":0,
+			"type": "string"
+		},
+		"postal_code": {
+			"required":1,
+			"type": "string"
+		},
+		"country": {
+			"required":1,
+			"type": "string"
+		}		
+	},
+    "contact_phone": {
+        "required":0,
+        "type": "string"
+    },
 }
