@@ -72,5 +72,5 @@
     "contact_phone": {
         "required":0,
         "type": "string"
-    },
+    }
 }
