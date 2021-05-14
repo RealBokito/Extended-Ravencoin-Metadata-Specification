@@ -1,6 +1,6 @@
 <b>Extended Ravencoin Metadata Specification</b>
 <pre>
-RIP: 15
+RIP: 16
 Title: RIP 16 Extended Ravencoin Metadata Specification
 Authors: Realbokito
 Status: Draft
