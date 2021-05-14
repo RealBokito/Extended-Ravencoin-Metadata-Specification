@@ -1,7 +1,7 @@
 <b>Extended Ravencoin Metadata Specification</b>
 <pre>
 RIP: 15
-Title: RIP 15 Extended Ravencoin Metadata Specification
+Title: RIP 16 Extended Ravencoin Metadata Specification
 Authors: Realbokito
 Status: Draft
 Type: Process
@@ -11,17 +11,17 @@ Last Update: 2021-04-16
 </pre>
 
 ==Abstract==
-RIP 15 Extended Ravencoin Metadata Specification’s objective is to increase the value and quality of metadata related to assets issued on the Ravencoin blockchain. It proposes a more structured way of describing assets by utilizing pre-defined schemas developed by the community and the users of the blockchain.
+RIP 16 Extended Ravencoin Metadata Specification’s objective is to increase the value and quality of metadata related to assets issued on the Ravencoin blockchain. It proposes a more structured way of describing assets by utilizing pre-defined schemas developed by the community and the users of the blockchain.
 
 ==Motivation==
-RIP 15 Extended Ravencoin Metadata Specification is a proposal to extend the current Ravencoin Metadata Specification by Tron Black July 24, 2018.
+RIP 16 Extended Ravencoin Metadata Specification is a proposal to extend the current Ravencoin Metadata Specification by Tron Black July 24, 2018.
 The metadata currently stored on IPFS and linked to assets issued on the Ravencoin blockchain consist of multiple non-required fields. The current specification does have drawbacks, including:
 
 *	Risk of low quality metadata about assets issued on the blockchain.
 *	Unclarity on which information may be useful to use for certain type of assets , such as but not limited to securities, stocks, bonds, real-estate and contracts.
 *	Unreadable metadata resources due to incorrect use of the JSON specification.
 
-The RIP15 Extended Ravencoin Metadata Specification:
+The RIP16 Extended Ravencoin Metadata Specification:
 *	will include a way to implement a modular schema system into the Ravencoin Metadata specification. 
 *	proposes the development of multiple schemas for various types of assets (e.g. books, toys, paintings, invoices and warranty documents and registrations) in order to help improve the quality of metadata related to assets issued on the blockchain.
 *	proposes to implement and use a validation mechanism based on predefined metadata schemas into Ravencoin Core, wallets and asset explorers on a voluntary basis
@@ -43,7 +43,7 @@ The following Ravencoin Metadata structure as proposed by Tron Black on July 24,
 </pre>
 
 ==Methodology==
-The RIP15 Extended Ravencoin Metadata Specification consists of two types of JSON resources:
+The RIP16 Extended Ravencoin Metadata Specification consists of two types of JSON resources:
 *	JSON structured Ravencoin Metadata Schemas which describes the structure of a certain set of meta data,
 *	JSON structured Ravencoin Metadata resources which describes the details of an asset using one or more Ravencoin Metadata schemas.
 
@@ -149,7 +149,7 @@ In continuation of the above CAR metadata schema example the following JSON obje
 Even when using the Extended Ravencoin Metadata System it remains possible to maintain the older Ravencoin Metadata fields for backwards compatibility. See Implementation, for more information.
 
 ==Multiple Schema’s==
-RIP 15 Extended Ravencoin Metadata Specification allows for the use of multiple sets of metadata. In order to support multiple schemas all metadata JSON objects are to be encapsulated in an array with the name “extended”. Each JSON object inside this array is a single Ravencoin Metadata Schema object and includes all (required) fields as well as the name and version of the schema used.
+RIP 16 Extended Ravencoin Metadata Specification allows for the use of multiple sets of metadata. In order to support multiple schemas all metadata JSON objects are to be encapsulated in an array with the name “extended”. Each JSON object inside this array is a single Ravencoin Metadata Schema object and includes all (required) fields as well as the name and version of the schema used.
 <pre>
 {
 	"extended": [
@@ -221,7 +221,7 @@ The following example show three JSON Metadata Objects:
 Note: The available prototype does not fully support external resources other than external metadata schemas and metadata files and is only supported within the extended section of a metadata file.
 
 ==Supported Data Types==
-The prototype of the RIP15 Extended Ravencoin Metadata Specification currently supports the following data types:
+The prototype of the RIP 16 Extended Ravencoin Metadata Specification currently supports the following data types:
 *	String
 *	Integer
 *	Float
@@ -233,15 +233,15 @@ Support is expected for:
 *	fields with an expression (not really a data type)
 
 ==Implementation==
-Reasons to implement and support RIP15 are:
+Reasons to implement and support RIP16 are:
 *	It lowers the bar for issuers by supplying predefined and validated schemas to chose from,
 *	It motivates issuers to provide for higher quality metadata linked to assets stored on the Ravencoin blockchain,
 *	It may stimulate the development of future RIPs and proposals which can or may utilize this structured way of storing Ravencoin Metadata, such as RIP 11.
-*	As part of RIP15 it is advised that that the community starts a SIG for developing various Ravencoin Metadata Schemas.
+*	As part of RIP16 it is advised that that the community starts a SIG for developing various Ravencoin Metadata Schemas.
 
 ==Developer Considerations==
 *	At https://github.com/RealBokito/Extended-Ravencoin-Metadata-Specification there is a Proof of Concept available which validates an Extended Ravencoin Metadata file using PHP.
-*	Developers of wallets who support the Ravencoin Asset Protocol, as well as asset explorers are free to implement the whole or parts of this RIP15 at their own discretion.
+*	Developers of wallets who support the Ravencoin Asset Protocol, as well as asset explorers are free to implement the whole or parts of this RIP16 at their own discretion.
 *	Tools to generate valid metadata for assets are advised to dynamically load forms/screens based on the metadata schema files.
 *	Tools utilizing schemas to validate the metadata of an asset are advised to:
 **	Consider soft passing Unknown Fields. This is mainly for backward compatibility with the older Metadata Specification.
